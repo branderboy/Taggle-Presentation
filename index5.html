@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaggleFish — The Complete Contractor Ecosystem</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                            950: '#0c0a09',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom styles for specific effects not in Tailwind default */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-900 antialiased bg-white overflow-x-hidden">
+
+    <!-- Announcement Bar -->
+    <div class="bg-stone-900 text-white text-center py-2 text-sm font-bold tracking-wide">
+        🎉 NEW: SPANISH LANGUAGE SUPPORT NOW INCLUDED FREE!
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b-2 border-stone-100 py-4 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="#" class="font-black text-2xl tracking-tighter uppercase flex items-center gap-1">
+                Taggle<span class="text-orange-600">Fish</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#how" class="text-stone-600 hover:text-stone-900 text-base font-bold uppercase tracking-tight transition-colors">How It Works</a>
+                <a href="#pricing" class="text-stone-600 hover:text-stone-900 text-base font-bold uppercase tracking-tight transition-colors">Pricing</a>
+                <a href="#spanish" class="text-orange-600 border-2 border-orange-100 bg-orange-50 px-4 py-2 rounded-lg text-base font-bold uppercase tracking-tight transition-colors">Español</a>
+                
+                <a href="#pricing" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded shadow-lg transition-colors">
+                    GET STARTED
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-stone-800">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-stone-200 shadow-xl py-6 px-6 flex flex-col gap-4">
+            <a href="#how" class="text-xl font-bold text-stone-800 py-3 border-b border-stone-100 mobile-link">How It Works</a>
+            <a href="#pricing" class="text-xl font-bold text-stone-800 py-3 border-b border-stone-100 mobile-link">Pricing</a>
+            <a href="#spanish" class="text-xl font-bold text-stone-800 py-3 border-b border-stone-100 mobile-link">Español</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-16 pb-24 px-4 bg-gradient-to-b from-stone-50 to-white">
+        <div class="max-w-5xl mx-auto text-center">
+            
+            <span class="bg-yellow-300 text-black text-xs md:text-sm font-black px-3 py-1 uppercase tracking-widest rounded-sm border border-black/10 shadow-sm inline-block">
+                ATTENTION: CONTRACTORS & TRADESMEN
+            </span>
+            
+            <h1 class="mt-8 text-4xl md:text-6xl lg:text-7xl font-black text-stone-900 leading-tight tracking-tighter uppercase">
+                The Complete Ecosystem To Manage Leads, Quote Jobs, and Get Paid
+            </h1>
+            
+            <p class="mt-8 text-2xl md:text-3xl text-stone-600 font-medium max-w-4xl mx-auto leading-tight">
+                A Powerful Suite of Products Working Together To Grow Your Business. 
+                <span class="text-stone-900 font-bold bg-yellow-200 px-1">Fully Bilingual (English & Español).</span>
+            </p>
+
+            <!-- VSL Placeholder -->
+            <div class="mt-12 mb-12 relative w-full max-w-4xl mx-auto aspect-video bg-stone-900 rounded-2xl shadow-2xl flex items-center justify-center group cursor-pointer border-4 border-white ring-4 ring-stone-200/50">
+                <div class="absolute inset-0 bg-gradient-to-tr from-stone-800 to-stone-700 opacity-50 rounded-xl"></div>
+                <div class="relative z-10 flex flex-col items-center gap-4">
+                    <div class="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="play" class="text-white ml-2 w-10 h-10" fill="white"></i>
+                    </div>
+                    <p class="text-white font-bold tracking-widest uppercase text-sm">Watch The Demo</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-4">
+                <a href="#pricing" class="group relative flex flex-col items-center justify-center px-8 py-5 rounded-xl font-black uppercase tracking-wide transition-all duration-200 transform hover:-translate-y-1 hover:shadow-2xl active:translate-y-0 focus:outline-none ring-offset-2 focus:ring-4 bg-[#ff9900] hover:bg-[#ffad33] text-white shadow-xl shadow-orange-900/30 ring-orange-400 border-b-4 border-orange-700 active:border-b-0 active:mt-1 w-full md:w-auto min-w-[280px] cursor-pointer">
+                    <span class="text-xl md:text-2xl z-10 flex items-center gap-2">
+                        GET INSTANT ACCESS NOW <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform" stroke-width="3"></i>
+                    </span>
+                    <span class="text-xs md:text-sm font-bold opacity-90 normal-case mt-1 tracking-normal">
+                        No Credit Card Required • Cancel Anytime
+                    </span>
+                </a>
+                <div class="flex items-center gap-2 text-sm font-semibold text-stone-500 mt-2">
+                    <span class="flex text-yellow-500">
+                        <i data-lucide="star" class="w-4 h-4" fill="currentColor"></i>
+                        <i data-lucide="star" class="w-4 h-4" fill="currentColor"></i>
+                        <i data-lucide="star" class="w-4 h-4" fill="currentColor"></i>
+                        <i data-lucide="star" class="w-4 h-4" fill="currentColor"></i>
+                        <i data-lucide="star" class="w-4 h-4" fill="currentColor"></i>
+                    </span>
+                    Trusted by 500+ Contractors
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="py-24 bg-stone-100 border-y border-stone-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-red-600 font-black text-4xl md:text-5xl uppercase leading-none mb-6">
+                        You're Leaving Thousands On The Table...
+                    </h2>
+                    <p class="text-xl md:text-2xl text-stone-700 font-medium leading-relaxed mb-8">
+                        The other guy isn't winning because he's a better builder. <span class="bg-red-100 font-bold px-1">He's winning because he answers the phone and sends a professional PDF.</span>
+                    </p>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border-l-8 border-red-500">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2 uppercase text-stone-400">
+                            <i data-lucide="x" class="text-red-500"></i> The "Old Way"
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-lg font-medium text-stone-500">
+                                <i data-lucide="x" class="mt-1 text-red-500 flex-shrink-0" stroke-width="3"></i> Missed calls while you're on the ladder
+                            </li>
+                            <li class="flex items-start gap-3 text-lg font-medium text-stone-500">
+                                <i data-lucide="x" class="mt-1 text-red-500 flex-shrink-0" stroke-width="3"></i> Texting prices with no breakdown
+                            </li>
+                            <li class="flex items-start gap-3 text-lg font-medium text-stone-500">
+                                <i data-lucide="x" class="mt-1 text-red-500 flex-shrink-0" stroke-width="3"></i> Forgetting to follow up on leads
+                            </li>
+                            <li class="flex items-start gap-3 text-lg font-medium text-stone-500">
+                                <i data-lucide="x" class="mt-1 text-red-500 flex-shrink-0" stroke-width="3"></i> Chasing checks for weeks
+                            </li>
+                            <li class="flex items-start gap-3 text-lg font-medium text-stone-500">
+                                <i data-lucide="x" class="mt-1 text-red-500 flex-shrink-0" stroke-width="3"></i> Arguing with GCs about 'scope'
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Visual for Pain -->
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-red-200 rounded-full blur-3xl opacity-30"></div>
+                    <div class="relative bg-white p-6 rounded-3xl shadow-2xl border border-stone-200 rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <div class="flex items-center gap-4 mb-6 border-b pb-4">
+                            <div class="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center font-bold text-xl">JD</div>
+                            <div>
+                                <div class="font-bold text-lg">John Doe (Client)</div>
+                                <div class="text-stone-400 text-sm">Text Message • Yesterday</div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 font-sans text-lg">
+                            <div class="bg-stone-100 p-4 rounded-2xl rounded-tl-none max-w-[80%]">
+                                Hey, never got that quote from you. We went with someone else. Thanks anyway.
+                            </div>
+                            <div class="text-center text-red-500 font-bold text-sm uppercase tracking-wide py-2">
+                                🚫 Opportunity Lost: $12,500
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION STACKS -->
+    
+    <!-- 1. Leads -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+                <div class="md:w-1/2">
+                    <!-- Phone Mockup -->
+                    <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[500px] w-[280px] shadow-2xl flex flex-col items-center justify-start overflow-hidden ring-4 ring-black/10">
+                        <div class="h-[32px] w-[3px] bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+                        <div class="h-[64px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+                        <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white relative">
+                            <!-- Fake Header -->
+                            <div class="bg-stone-900 h-16 w-full flex items-center justify-center pt-4">
+                                <span class="text-white font-bold tracking-wider">TAGGLEFISH</span>
+                            </div>
+                            <!-- Content -->
+                            <div class="p-6 flex flex-col h-full items-center text-center pt-8">
+                                <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 mb-6">
+                                    <i data-lucide="message-square" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="text-xl font-black text-stone-900 mb-4 leading-tight">Lead Capture & Auto-Reply</h3>
+                                <div class="space-y-3 w-full text-left">
+                                    <div class="bg-stone-50 p-3 rounded-lg border border-stone-200 text-sm font-semibold text-stone-600 flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600"></i> Instant Text Reply
+                                    </div>
+                                    <div class="bg-stone-50 p-3 rounded-lg border border-stone-200 text-sm font-semibold text-stone-600 flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600"></i> Auto Follow-Up Sequence
+                                    </div>
+                                    <div class="bg-stone-50 p-3 rounded-lg border border-stone-200 text-sm font-semibold text-stone-600 flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600"></i> WhatsApp Integration
+                                    </div>
+                                    <div class="bg-stone-50 p-3 rounded-lg border border-stone-200 text-sm font-semibold text-stone-600 flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-600"></i> Lead Dashboard
+                                    </div>
+                                </div>
+                                <div class="mt-auto mb-8 w-full">
+                                    <div class="bg-green-500 text-white font-bold py-3 rounded-lg shadow-lg text-sm">
+                                        CONFIRM JOB
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="bg-blue-200 text-black text-xs md:text-sm font-black px-3 py-1 uppercase tracking-widest rounded-sm border border-black/10 shadow-sm inline-block">
+                        FEATURE #1: AUTOMATION
+                    </span>
+                    <h2 class="mt-6 text-4xl md:text-6xl font-black text-stone-900 leading-tight">
+                        NEVER MISS A <br/><span class="text-blue-600">LEAD AGAIN</span>
+                    </h2>
+                    <p class="mt-6 text-xl text-stone-600 font-medium">
+                        Your site captures leads and sends an instant reply by text, email, or WhatsApp. If they don’t answer, it follows up for you automatically.
+                    </p>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-stone-700">
+                            <div class="mt-1 bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0">
+                                <i data-lucide="check" stroke-width="4" class="w-4 h-4"></i>
+                            </div>
+                            <span>Instant Response (Even while you sleep)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-stone-700">
+                            <div class="mt-1 bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0">
+                                <i data-lucide="check" stroke-width="4" class="w-4 h-4"></i>
+                            </div>
+                            <span>Separate "Tire Kickers" from Real Jobs</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-stone-700">
+                            <div class="mt-1 bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0">
+                                <i data-lucide="check" stroke-width="4" class="w-4 h-4"></i>
+                            </div>
+                            <span>Fully Bilingual Chat Bots</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Quotes -->
+    <section class="py-24 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-16 md:gap-24">
+                <div class="md:w-1/2">
+                   <!-- Doc Stack Visual -->
+                   <div class="relative group perspective-1000">
+                      <div class="absolute inset-0 bg-orange-500 blur-[80px] opacity-20"></div>
+                      <div class="relative w-3/4 mx-auto aspect-[3/4] bg-white text-stone-900 p-8 shadow-2xl rounded-lg transform rotate-6 group-hover:rotate-0 transition-transform duration-500 border-t-8 border-orange-500">
+                        <div class="flex justify-between items-start mb-8">
+                          <div class="text-2xl font-black uppercase tracking-tighter">Quote</div>
+                          <div class="text-right">
+                            <div class="font-bold text-3xl">$8,450.00</div>
+                            <div class="text-xs font-bold text-green-600 uppercase bg-green-100 px-2 py-1 rounded inline-block mt-1">Deposit Paid</div>
+                          </div>
+                        </div>
+                        <div class="space-y-4 mb-8">
+                          <div class="h-4 bg-stone-100 rounded w-full"></div>
+                          <div class="h-4 bg-stone-100 rounded w-5/6"></div>
+                          <div class="h-4 bg-stone-100 rounded w-4/6"></div>
+                        </div>
+                        <div class="border-t-2 border-dashed border-stone-200 pt-4">
+                           <div class="flex items-center gap-2 text-sm font-bold text-stone-500">
+                             <div class="w-8 h-8 rounded-full bg-stone-200"></div> Client Signature
+                           </div>
+                        </div>
+                      </div>
+                      <!-- Layer effect -->
+                      <div class="absolute top-4 -right-4 w-3/4 mx-auto aspect-[3/4] bg-stone-800 rounded-lg -z-10 shadow-lg transform rotate-12"></div>
+                   </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="bg-orange-400 text-black text-xs md:text-sm font-black px-3 py-1 uppercase tracking-widest rounded-sm border border-black/10 shadow-sm inline-block">
+                        FEATURE #2: QUOTING
+                    </span>
+                    <h2 class="mt-6 text-4xl md:text-6xl font-black text-white leading-tight">
+                        SEND REAL QUOTES <br/><span class="text-orange-500">IN SECONDS</span>
+                    </h2>
+                    <p class="mt-6 text-xl text-stone-400 font-medium">
+                        Build your pricing once. Pull real material prices. Quote from your phone. Send a clean PDF on the spot.
+                    </p>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                            <i data-lucide="check" class="text-orange-500 mt-1" stroke-width="4"></i> Real Material Pricing Database
+                        </li>
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                            <i data-lucide="check" class="text-orange-500 mt-1" stroke-width="4"></i> Collect Deposits Instantly via Stripe
+                        </li>
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                            <i data-lucide="check" class="text-orange-500 mt-1" stroke-width="4"></i> Stop "Guessing" Your Profit
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Bids -->
+    <section class="py-24 bg-stone-50 border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+                <div class="md:w-1/2">
+                   <div class="bg-white p-8 rounded-2xl shadow-2xl border border-stone-200 relative">
+                     <i data-lucide="shield-check" class="w-16 h-16 text-green-600 mb-6"></i>
+                     <h3 class="text-2xl font-black mb-4">SCOPE PROTECTION ACTIVATED</h3>
+                     <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-stone-50 rounded border">
+                          <span class="font-bold">Drywall Hanging</span>
+                          <span class="text-green-600 font-bold">INCLUDED</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-stone-50 rounded border">
+                          <span class="font-bold">Debris Removal</span>
+                          <span class="text-green-600 font-bold">INCLUDED</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-red-50 border border-red-100 rounded opacity-75">
+                          <span class="font-bold text-stone-500">Painting (Trim)</span>
+                          <span class="text-red-500 font-bold">EXCLUDED</span>
+                        </div>
+                     </div>
+                   </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="bg-green-300 text-black text-xs md:text-sm font-black px-3 py-1 uppercase tracking-widest rounded-sm border border-black/10 shadow-sm inline-block">
+                        FEATURE #3: PROTECTION
+                    </span>
+                    <h2 class="mt-6 text-4xl md:text-6xl font-black text-stone-900 leading-tight">
+                        WIN BIDS WITHOUT <br/><span class="text-green-600">GETTING SCREWED</span>
+                    </h2>
+                    <p class="mt-6 text-xl text-stone-600 font-medium">
+                        The system writes out exactly what you’re doing, what you’re NOT doing, and what happens if something changes. 
+                    </p>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-stone-700">
+                            <div class="mt-1 bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0">
+                                <i data-lucide="check" stroke-width="4" class="w-4 h-4"></i>
+                            </div>
+                            <span>Prevents "Scope Creep"</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-stone-700">
+                            <div class="mt-1 bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0">
+                                <i data-lucide="check" stroke-width="4" class="w-4 h-4"></i>
+                            </div>
+                            <span>Professional PDF Bid Packages</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-stone-700">
+                            <div class="mt-1 bg-green-100 p-1 rounded-full text-green-700 flex-shrink-0">
+                                <i data-lucide="check" stroke-width="4" class="w-4 h-4"></i>
+                            </div>
+                            <span>Ends Arguments Before They Start</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-24 bg-stone-900 text-white relative overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-stone-800 to-stone-950 -z-10"></div>
+        
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-7xl font-black text-white mb-6">CHOOSE YOUR WEAPON</h2>
+                <p class="text-2xl text-stone-400">Start Free. Upgrade As You Grow.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-end">
+                
+                <!-- TIER 1 -->
+                <div class="bg-stone-800 rounded-2xl p-8 border-2 border-stone-700 hover:border-stone-600 transition-colors">
+                    <h3 class="text-2xl font-black text-stone-400 mb-2">STARTER</h3>
+                    <div class="text-4xl font-black mb-6">FREE</div>
+                    <p class="text-stone-400 mb-8 h-12">Perfect for side jobs and simple estimates.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Basic PDF Quotes</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Material Calculator</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> 3 Active Leads</li>
+                    </ul>
+                    <a href="#" class="group relative flex flex-col items-center justify-center px-8 py-4 rounded-xl font-black uppercase tracking-wide transition-all duration-200 transform hover:-translate-y-1 hover:shadow-2xl active:translate-y-0 focus:outline-none ring-offset-2 focus:ring-4 bg-white hover:bg-gray-50 text-stone-900 border-2 border-stone-200 shadow-lg ring-stone-200 w-full text-sm">
+                        <span class="text-xl md:text-xl z-10 flex items-center gap-2">Create Free Account <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform" stroke-width="3"></i></span>
+                    </a>
+                </div>
+
+                <!-- TIER 2 - MOST POPULAR -->
+                <div class="bg-white text-stone-900 rounded-3xl p-8 border-4 border-orange-500 shadow-[0_0_50px_rgba(255,165,0,0.3)] relative transform lg:-translate-y-4">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange-600 text-white font-bold px-6 py-2 rounded-full uppercase tracking-wide text-sm shadow-lg whitespace-nowrap">
+                        Most Popular
+                    </div>
+                    <h3 class="text-3xl font-black mb-2 text-orange-600">GROWTH</h3>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-6xl font-black">$49</span>
+                        <span class="text-stone-500 font-bold">/mo</span>
+                    </div>
+                    <p class="text-stone-500 font-medium mb-8 border-b border-stone-100 pb-6">
+                        Everything you need to look professional and win 2x more bids.
+                    </p>
+                    <ul class="space-y-4 mb-8 text-lg font-bold">
+                        <li class="flex gap-3"><div class="bg-green-100 p-1 rounded-full text-green-600"><i data-lucide="check" class="w-4 h-4" stroke-width="4"></i></div> Unlimited Leads</li>
+                        <li class="flex gap-3"><div class="bg-green-100 p-1 rounded-full text-green-600"><i data-lucide="check" class="w-4 h-4" stroke-width="4"></i></div> Auto-Reply & Follow Up</li>
+                        <li class="flex gap-3"><div class="bg-green-100 p-1 rounded-full text-green-600"><i data-lucide="check" class="w-4 h-4" stroke-width="4"></i></div> Stripe Payments</li>
+                        <li class="flex gap-3"><div class="bg-green-100 p-1 rounded-full text-green-600"><i data-lucide="check" class="w-4 h-4" stroke-width="4"></i></div> Photo Quoting</li>
+                        <li class="flex gap-3"><div class="bg-green-100 p-1 rounded-full text-green-600"><i data-lucide="check" class="w-4 h-4" stroke-width="4"></i></div> Bilingual Support</li>
+                    </ul>
+                    <a href="#" class="group relative flex flex-col items-center justify-center px-8 py-5 rounded-xl font-black uppercase tracking-wide transition-all duration-200 transform hover:-translate-y-1 hover:shadow-2xl active:translate-y-0 focus:outline-none ring-offset-2 focus:ring-4 bg-[#ff9900] hover:bg-[#ffad33] text-white shadow-xl shadow-orange-900/30 ring-orange-400 border-b-4 border-orange-700 active:border-b-0 active:mt-1 w-full text-xl">
+                        <span class="text-xl md:text-2xl z-10 flex items-center gap-2">Start Growth Plan <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform" stroke-width="3"></i></span>
+                        <span class="text-xs md:text-sm font-bold opacity-90 normal-case mt-1 tracking-normal">14-Day Free Trial</span>
+                    </a>
+                </div>
+
+                <!-- TIER 3 -->
+                <div class="bg-stone-800 rounded-2xl p-8 border-2 border-stone-700 hover:border-stone-600 transition-colors">
+                    <h3 class="text-2xl font-black text-stone-400 mb-2">DOMINATION</h3>
+                    <div class="text-4xl font-black mb-6">$299<span class="text-lg text-stone-500 font-normal">/mo</span></div>
+                    <p class="text-stone-400 mb-8 h-12">Full marketing install. We build the site and rank it.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex gap-2"><i data-lucide="check" class="text-orange-500 w-5 h-5"></i> Custom Website</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-orange-500 w-5 h-5"></i> Local SEO</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-orange-500 w-5 h-5"></i> Google Ads Mgmt</li>
+                    </ul>
+                    <a href="#" class="group relative flex flex-col items-center justify-center px-8 py-4 rounded-xl font-black uppercase tracking-wide transition-all duration-200 transform hover:-translate-y-1 hover:shadow-2xl active:translate-y-0 focus:outline-none ring-offset-2 focus:ring-4 bg-white hover:bg-gray-50 text-stone-900 border-2 border-stone-200 shadow-lg ring-stone-200 w-full text-sm">
+                        <span class="text-xl md:text-xl z-10 flex items-center gap-2">Book Strategy Call <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform" stroke-width="3"></i></span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="mt-16 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
+                 <div class="flex items-center gap-3 mb-4">
+                   <i data-lucide="shield-check" class="text-yellow-400 w-12 h-12"></i>
+                   <h3 class="text-2xl font-black uppercase text-white">30-Day Money Back Guarantee</h3>
+                 </div>
+                 <p class="text-stone-400">If you don't book a job in your first 30 days using our system, we'll refund your subscription in full. No questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPANISH SECTION -->
+    <section id="spanish" class="py-20 bg-orange-600 text-white relative overflow-hidden">
+        <!-- Texture -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block bg-white text-orange-600 font-black px-4 py-1 rounded mb-6 uppercase tracking-widest text-sm transform -rotate-2">
+                Included For Free
+            </div>
+            <h2 class="text-5xl md:text-7xl font-black leading-none mb-8">
+                TODO EN ESPAÑOL
+            </h2>
+            <p class="text-2xl md:text-3xl font-bold text-orange-100 max-w-3xl mx-auto mb-12">
+                No necesitas contratar a un traductor. El sistema hace todo el trabajo por ti.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                <div class="bg-orange-700/50 p-4 rounded-xl border border-orange-500/30 flex items-center gap-3 font-bold">
+                    <i data-lucide="check" class="text-yellow-400 flex-shrink-0"></i> Contratos en Español
+                </div>
+                <div class="bg-orange-700/50 p-4 rounded-xl border border-orange-500/30 flex items-center gap-3 font-bold">
+                    <i data-lucide="check" class="text-yellow-400 flex-shrink-0"></i> Chat Bilingüe
+                </div>
+                <div class="bg-orange-700/50 p-4 rounded-xl border border-orange-500/30 flex items-center gap-3 font-bold">
+                    <i data-lucide="check" class="text-yellow-400 flex-shrink-0"></i> Facturas Claras
+                </div>
+                <div class="bg-orange-700/50 p-4 rounded-xl border border-orange-500/30 flex items-center gap-3 font-bold">
+                    <i data-lucide="check" class="text-yellow-400 flex-shrink-0"></i> Soporte Técnico
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-stone-500 py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="font-black text-2xl tracking-tighter uppercase text-stone-300">
+                Taggle<span class="text-orange-600">Fish</span>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6 text-sm font-bold text-stone-600">
+                <a href="#" class="hover:text-stone-300">Privacy Policy</a>
+                <a href="#" class="hover:text-stone-300">Terms of Service</a>
+                <a href="#" class="hover:text-stone-300">Support</a>
+            </div>
+            <div class="text-sm">
+                &copy; 2025 TaggleFish.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Mobile Menu -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const iconElement = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                // Change icon to X
+                iconElement.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                // Change icon back to Menu
+                iconElement.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons(); // Re-render icons after changing attribute
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconElement.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
