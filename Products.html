@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaggleFish — Integrated Solutions for Contractors</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                            950: '#0c0a09',
+                        },
+                        brand: {
+                            orange: '#ff9900',
+                            darkOrange: '#e68a00',
+                            red: '#dc2626',
+                        }
+                    },
+                    boxShadow: {
+                        'funnel': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'button': '0 4px 0 #b36b00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cf-button {
+            background: linear-gradient(180deg, #ffbc40 0%, #ff9900 100%);
+            box-shadow: 0 4px 0 #b36b00, 0 5px 10px rgba(0,0,0,0.2);
+            transition: all 0.1s;
+        }
+        .cf-button:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #b36b00, inset 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-900 antialiased bg-stone-50 overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-stone-900 text-white text-center py-2 text-sm font-bold tracking-wider uppercase border-b-4 border-brand-orange">
+        ⚠️ Attention Contractors: Discover The Most Integrated Ecosystem For Your Trade
+    </div>
+
+    <!-- Minimal Header (Logo Only) -->
+    <nav class="bg-white py-4 shadow-sm relative z-50">
+        <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+            <a href="#" class="font-black text-2xl tracking-tighter uppercase flex items-center gap-1 leading-none text-stone-900">
+                Taggle<span class="text-brand-orange">Fish</span>
+            </a>
+            
+            <a href="#" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded shadow-lg uppercase text-sm hidden md:block transition-transform hover:scale-105">
+                GET STARTED
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-12 pb-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <div class="text-brand-orange font-black text-lg md:text-xl uppercase tracking-widest mb-4">
+                The Future of Your Contracting Business
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black text-stone-900 leading-tight mb-6">
+                Turn Your "Brochure" Website Into A <span class="bg-yellow-300 px-2">Lead-Gen Machine</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-stone-600 font-medium max-w-3xl mx-auto mb-10">
+                The All-In-One WordPress Plugin Bundle Built Specifically For Professional Contractors, Painters, and Drywall Pros.
+            </p>
+
+            <!-- Image Container -->
+            <div class="mb-10 max-w-3xl mx-auto rounded-lg shadow-2xl overflow-hidden border-4 border-stone-200 group">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2070&auto=format&fit=crop" alt="Professional contractor working on site" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+            </div>
+
+            <!-- Main CTA -->
+            <div class="flex flex-col items-center gap-4">
+                <a href="#" class="cf-button w-full md:w-auto px-12 py-5 rounded-lg text-stone-900 flex flex-col items-center justify-center min-w-[350px]">
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tight">GET INSTANT ACCESS NOW</span>
+                    <span class="text-sm font-bold opacity-80 uppercase tracking-wide mt-1">Add To My WordPress Site »</span>
+                </a>
+                <div class="flex items-center gap-2 text-sm font-bold text-stone-500 uppercase tracking-wide">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i> Fully Bilingual (English & Español)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM/AGITATION SECTION -->
+    <section class="py-16 bg-stone-100 border-t border-stone-300">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-stone-900 mb-12 uppercase">
+                The Challenges TaggleFish Solves
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-8 border-stone-400">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-stone-100 p-2 rounded-full"><i data-lucide="alert-circle" class="w-8 h-8 text-stone-900"></i></div>
+                        <h3 class="font-bold text-xl text-stone-900">Communication Gaps</h3>
+                    </div>
+                    <p class="text-stone-600">Missed calls while you're on a job shouldn't mean a missed customer. TaggleFish ensures an instant, professional response every single time.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-8 border-stone-400">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-stone-100 p-2 rounded-full"><i data-lucide="layers" class="w-8 h-8 text-stone-900"></i></div>
+                        <h3 class="font-bold text-xl text-stone-900">Disconnected Tools</h3>
+                    </div>
+                    <p class="text-stone-600">Stop juggling different apps for chat, booking, and lead tracking. TaggleFish brings your entire workflow into one single dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section id="solutions" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-black text-center text-stone-900 mb-4 uppercase">
+                Integrated Solutions
+            </h2>
+            <p class="text-center text-xl text-stone-500 mb-12 font-medium">Powering Your Business Growth</p>
+
+            <div class="space-y-12">
+                <!-- Feature 1 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center border-b border-stone-200 pb-12">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-stone-100 rounded-lg p-8 flex items-center justify-center">
+                            <i data-lucide="bar-chart-3" class="w-24 h-24 text-stone-300"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-black text-stone-900 mb-2 uppercase">1. Smart CRM Lite</h3>
+                        <p class="text-lg text-stone-600">Engage leads instantly via automated text. If they don't respond, our system handles the follow-up sequences so you can focus on the job site.</p>
+                        <ul class="mt-4 space-y-2 text-stone-500 font-bold text-sm uppercase">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-orange"></i> Instant Lead Alerts</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-orange"></i> Auto Follow-Up Sequences</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center border-b border-stone-200 pb-12">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-stone-100 rounded-lg p-8 flex items-center justify-center">
+                            <i data-lucide="calendar" class="w-24 h-24 text-stone-300"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-black text-stone-900 mb-2 uppercase">2. Automated Booking</h3>
+                        <p class="text-lg text-stone-600">Allow customers to book estimate appointments directly from your site. Fully synced with Google Calendar to prevent scheduling conflicts.</p>
+                        <ul class="mt-4 space-y-2 text-stone-500 font-bold text-sm uppercase">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-orange"></i> Live Availability Sync</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-orange"></i> Customer Confirmations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center pb-12">
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-stone-100 rounded-lg p-8 flex items-center justify-center">
+                            <i data-lucide="refresh-cw" class="w-24 h-24 text-stone-300"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-black text-stone-900 mb-2 uppercase">3. Smart Updates & SEO</h3>
+                        <p class="text-lg text-stone-600">Automate your content management. Generate localized landing pages for the service areas you cover without manual technical work.</p>
+                        <ul class="mt-4 space-y-2 text-stone-500 font-bold text-sm uppercase">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-orange"></i> Bulk SEO Editing</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-orange"></i> Localized Landing Pages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE VALUE SUMMARY STACK -->
+    <section class="py-20 bg-stone-100 border-t-2 border-dashed border-stone-300">
+        <div class="max-w-3xl mx-auto px-6">
+            
+            <div class="bg-white rounded-lg shadow-2xl overflow-hidden border-2 border-stone-200">
+                <!-- Header -->
+                <div class="bg-stone-900 text-white p-8 text-center">
+                    <h2 class="text-3xl font-black uppercase text-yellow-400">The TaggleFish Advantage</h2>
+                    <p class="text-stone-300 font-bold mt-2">All Features Integrated Into One System</p>
+                </div>
+
+                <!-- Summary -->
+                <div class="p-8 md:p-12 space-y-4">
+                    <div class="flex justify-between items-center border-b border-stone-100 pb-2">
+                        <div class="font-bold text-stone-700 flex items-center gap-2"><i data-lucide="check" class="text-green-600 w-5 h-5"></i> Smart CRM Lite</div>
+                        <div class="font-bold text-stone-400 uppercase text-xs">Included</div>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone-100 pb-2">
+                        <div class="font-bold text-stone-700 flex items-center gap-2"><i data-lucide="check" class="text-green-600 w-5 h-5"></i> Smart Booking</div>
+                        <div class="font-bold text-stone-400 uppercase text-xs">Included</div>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone-100 pb-2">
+                        <div class="font-bold text-stone-700 flex items-center gap-2"><i data-lucide="check" class="text-green-600 w-5 h-5"></i> Smart Chat</div>
+                        <div class="font-bold text-stone-400 uppercase text-xs">Included</div>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone-100 pb-2">
+                        <div class="font-bold text-stone-700 flex items-center gap-2"><i data-lucide="check" class="text-green-600 w-5 h-5"></i> Smart Messaging</div>
+                        <div class="font-bold text-stone-400 uppercase text-xs">Included</div>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone-100 pb-2">
+                        <div class="font-bold text-stone-700 flex items-center gap-2"><i data-lucide="check" class="text-green-600 w-5 h-5"></i> Bilingual Support</div>
+                        <div class="font-bold text-stone-400 uppercase text-xs">Included</div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center pt-6 text-xl">
+                        <div class="font-black text-stone-900 uppercase">Unified Ecosystem</div>
+                        <div class="font-black text-stone-900"><i data-lucide="award" class="w-6 h-6 inline text-brand-orange"></i></div>
+                    </div>
+                </div>
+
+                <!-- Price Anchor -->
+                <div class="bg-yellow-50 p-8 text-center border-t border-yellow-200">
+                    <p class="text-stone-500 font-bold uppercase text-sm mb-6">Experience The Most Powerful Tools In The Trade</p>
+
+                    <a href="#" class="cf-button w-full px-8 py-6 rounded-lg text-stone-900 flex flex-col items-center justify-center shadow-xl hover:scale-[1.02] transition-transform">
+                        <span class="text-2xl md:text-3xl font-black uppercase tracking-tight">GET INSTANT ACCESS NOW</span>
+                        <span class="text-sm font-bold opacity-80 mt-1 uppercase">Add To My WordPress Site »</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Trust Point -->
+            <div class="mt-12 flex items-center gap-6 bg-white p-6 rounded-lg border border-stone-200">
+                <div class="w-20 h-20 shrink-0 bg-stone-900 rounded-full flex items-center justify-center text-white">
+                    <i data-lucide="shield-check" class="w-10 h-10"></i>
+                </div>
+                <div>
+                    <h3 class="font-black text-xl text-stone-900 uppercase mb-2">Built for Reliability</h3>
+                    <p class="text-stone-600 text-sm">Our system is built specifically for contractors who need tools that work as hard as they do. No fluff, just results.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-black text-center text-stone-900 mb-10 uppercase">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <div class="border border-stone-200 rounded-lg p-6">
+                    <h4 class="font-bold text-stone-900 mb-2">Does this work with my existing website?</h4>
+                    <p class="text-stone-600">Yes! TaggleFish is a WordPress-native ecosystem designed to work seamlessly with your existing theme and builders like Elementor or Divi.</p>
+                </div>
+                <div class="border border-stone-200 rounded-lg p-6">
+                    <h4 class="font-bold text-stone-900 mb-2">Is there bilingual support?</h4>
+                    <p class="text-stone-600">Absolutely. TaggleFish is built to support both English and Spanish speaking contractors and their customers.</p>
+                </div>
+                <div class="border border-stone-200 rounded-lg p-6">
+                    <h4 class="font-bold text-stone-900 mb-2">How do the automated updates work?</h4>
+                    <p class="text-stone-600">The system automatically manages meta-data, local landing pages, and content freshness to ensure your site stays relevant for search engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 py-12 text-center text-stone-500 text-sm">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <div class="font-black text-lg tracking-tighter uppercase leading-none text-stone-300">
+                    Taggle<span class="text-brand-orange">Fish</span>
+                </div>
+            </div>
+            <p class="mb-6">&copy; 2025 TaggleFish. All Rights Reserved.</p>
+            <div class="flex justify-center gap-4 text-xs">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
