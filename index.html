@@ -53,16 +53,18 @@
             background-size: 200% 100%;
             animation: path-flow 3s linear infinite;
         }
+        
+        .hidden-step { display: none; }
     </style>
 </head>
 <body class="antialiased selection:bg-fuchsia-600 selection:text-white pb-24 md:pb-0">
 
     <!-- Sticky Mobile CTA -->
     <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 z-50 md:hidden flex gap-2 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
-        <a href="#giveaway" class="w-1/3 flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-slate-800 font-bold py-3 rounded text-sm uppercase transition-colors border border-gray-200">
+        <a href="#top-form" class="w-1/3 flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-slate-800 font-bold py-3 rounded text-sm uppercase transition-colors border border-gray-200">
             Giveaway
         </a>
-        <a href="#buy" class="w-2/3 flex items-center justify-center bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white font-bold py-3 rounded text-sm uppercase transition-colors shadow-[0_4px_10px_rgba(249,115,22,0.3)]">
+        <a href="#buy-section" class="w-2/3 flex items-center justify-center bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white font-bold py-3 rounded text-sm uppercase transition-colors shadow-[0_4px_10px_rgba(249,115,22,0.3)]">
             Buy Tickets Now
         </a>
     </div>
@@ -83,7 +85,7 @@
                 <div class="inline-block bg-fuchsia-500/20 border border-fuchsia-500/30 text-fuchsia-200 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest shadow-sm backdrop-blur-sm">
                     🚨 Official Event Drop
                 </div>
-                <h1 class="text-6xl md:text-8xl leading-none text-white relative w-full mb-4">
+                <h1 class="text-6xl md:text-8xl leading-none text-white relative w-full mb-4 font-anton">
                     WIN FREE TICKETS TO <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-[#ffdfc4]">SOULSTICE '26</span>
                 </h1>
@@ -92,9 +94,10 @@
                 </p>
             </div>
             
-            <div class="w-full flex justify-center">
+            <div class="w-full flex justify-center scroll-mt-24" id="top-form">
                 <div class="relative w-full max-w-md group">
-                    <div class="absolute top-1/2 -left-10 lg:-left-14 transform -translate-y-1/2 z-20 pointer-events-none">
+                    <!-- Animated Gradient Purple Arrow -->
+                    <div id="form-arrow" class="absolute top-1/2 -left-10 lg:-left-14 transform -translate-y-1/2 z-20 pointer-events-none transition-opacity duration-300">
                         <div class="animate-point-right">
                             <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter drop-shadow-[0_0_12px_rgba(168,85,247,0.7)]">
                                 <defs>
@@ -108,14 +111,21 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="w-full bg-white p-8 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-gray-100 relative z-10" id="top-form">
+
+                    <!-- STEP 1: SIGNUP FORM -->
+                    <div id="signup-step" class="w-full bg-white p-8 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-gray-100 relative z-10">
                         <h3 class="text-3xl font-anton text-slate-900 mb-2 uppercase">Enter The Draw</h3>
-                        <form class="flex flex-col gap-4">
+                        <p class="text-slate-500 text-sm mb-6 font-medium">Winner alerts sent via Digital Pass.</p>
+                        
+                        <form class="flex flex-col gap-4" id="lead-form">
                             <input type="text" placeholder="Full Name" required class="bg-gray-50 border border-gray-200 text-slate-800 px-5 py-4 rounded-lg font-semibold outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-100 transition-all">
                             <input type="email" placeholder="Email Address" required class="bg-gray-50 border border-gray-200 text-slate-800 px-5 py-4 rounded-lg font-semibold outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-100 transition-all">
-                            <input type="tel" placeholder="Phone Number" required class="bg-gray-50 border border-gray-200 text-slate-800 px-5 py-4 rounded-lg font-semibold outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-100 transition-all">
-                            <button type="button" class="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white text-xl font-bold py-5 rounded-lg uppercase transition-all shadow-[0_8px_20px_rgba(192,38,211,0.3)] hover:-translate-y-1 mt-2">
-                                Enter Giveaway Now
+                            <div class="relative">
+                                <input type="tel" placeholder="Phone (Optional)" class="w-full bg-gray-50 border border-gray-200 text-slate-800 px-5 py-4 rounded-lg font-semibold outline-none focus:border-fuchsia-500 focus:ring-2 focus:ring-fuchsia-100 transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-black text-fuchsia-600 bg-fuchsia-50 px-2 py-1 rounded-full uppercase tracking-tighter">+2 BONUS ENTRIES</span>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white text-xl font-bold py-5 rounded-lg uppercase transition-all shadow-[0_8px_20px_rgba(192,38,211,0.3)] hover:-translate-y-1 mt-2">
+                                Enter to Win + Get Access
                             </button>
                         </form>
                         <div class="relative flex py-6 items-center">
@@ -123,9 +133,38 @@
                             <span class="flex-shrink-0 mx-4 text-slate-400 text-xs font-bold uppercase tracking-widest">Or skip the line</span>
                             <div class="flex-grow border-t border-gray-200"></div>
                         </div>
-                        <a href="#buy" class="block w-full text-center border-2 border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 font-bold py-4 rounded-lg uppercase transition-colors">
+                        <a href="#buy-section" class="block w-full text-center border-2 border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 font-bold py-4 rounded-lg uppercase transition-colors">
                             Buy Tickets Immediately
                         </a>
+                    </div>
+
+                    <!-- STEP 2: CONFIRMATION / WALLET PASS -->
+                    <div id="confirmation-step" class="hidden-step w-full bg-slate-900 p-8 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-slate-700 relative z-10 text-center">
+                        <div class="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-emerald-500/30">
+                            <i data-lucide="check-circle" class="w-10 h-10 text-emerald-400"></i>
+                        </div>
+                        <h3 class="text-3xl font-anton text-white mb-2 uppercase">You're Entered!</h3>
+                        <p class="text-slate-400 text-sm mb-8">But you haven't finished the process. To receive your entry confirmation and alerts, you <strong class="text-white">must</strong> install your pass.</p>
+                        
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-5 mb-8 text-left space-y-4">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="bell" class="w-5 h-5 text-fuchsia-400"></i>
+                                <span class="text-white text-xs font-bold uppercase">Real-time Winner Alerts</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-fuchsia-400"></i>
+                                <span class="text-white text-xs font-bold uppercase">Afterparty Location Drops</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="unlock" class="w-5 h-5 text-fuchsia-400"></i>
+                                <span class="text-white text-xs font-bold uppercase">VIP Access Unlocks</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="block w-full bg-white text-black hover:bg-gray-100 text-xl font-black py-6 rounded-xl uppercase transition-all shadow-[0_10px_30px_rgba(255,255,255,0.1)] flex items-center justify-center gap-3">
+                            <i data-lucide="wallet" class="w-6 h-6"></i> Add to Wallet
+                        </a>
+                        <p class="text-slate-500 text-[10px] mt-4 uppercase font-bold tracking-widest">Required for entry confirmation</p>
                     </div>
                 </div>
             </div>
@@ -136,12 +175,11 @@
     <section class="py-20 md:py-32 max-w-7xl mx-auto px-4 relative">
         <div class="text-center mb-20">
             <h2 class="text-5xl md:text-7xl font-anton text-slate-900 mb-4 tracking-tighter">THE PLAYBOOK</h2>
-            <p class="text-xl text-slate-500 font-medium">Play the game, or buy your way out of the line.</p>
+            <p class="text-xl text-slate-500 font-medium italic">Play the game, or buy your way out of the line.</p>
         </div>
 
         <!-- Progress Flow Container -->
         <div class="relative">
-            <!-- Animated Connection Line (Desktop) -->
             <div class="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-1 bg-gray-100 -z-10 rounded-full overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-orange-500 animate-path"></div>
             </div>
@@ -149,38 +187,28 @@
             <div class="grid md:grid-cols-3 gap-12 md:gap-8">
                 <!-- Step 01 -->
                 <div class="relative flex flex-col items-center">
-                    <div class="w-24 h-24 rounded-full bg-white border-4 border-violet-600 flex items-center justify-center text-4xl font-anton text-violet-600 shadow-xl mb-8 relative z-10 transition-transform hover:scale-110">
-                        01
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl text-center w-full min-h-[220px] flex flex-col justify-center transition-all hover:shadow-2xl">
-                        <h3 class="text-2xl font-anton text-slate-900 mb-4 uppercase tracking-wide">Throw Your Name In</h3>
-                        <p class="text-slate-600 leading-relaxed">Enter the giveaway above. You're officially in the draw. Leave it up to luck.</p>
+                    <div class="w-24 h-24 rounded-full bg-white border-4 border-violet-600 flex items-center justify-center text-4xl font-anton text-violet-600 shadow-xl mb-8 relative z-10">01</div>
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl text-center w-full min-h-[220px] flex flex-col justify-center">
+                        <h3 class="text-2xl font-anton text-slate-900 mb-4 uppercase tracking-wide">Enter The Pool</h3>
+                        <p class="text-slate-600 leading-relaxed">Drop your info above. You're officially in the running for the free 100 VIP drops.</p>
                     </div>
                 </div>
 
                 <!-- Step 02 -->
                 <div class="relative flex flex-col items-center">
-                    <div class="w-24 h-24 rounded-full bg-white border-4 border-fuchsia-600 flex items-center justify-center text-4xl font-anton text-fuchsia-600 shadow-xl mb-8 relative z-10 transition-transform hover:scale-110">
-                        02
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl text-center w-full min-h-[220px] flex flex-col justify-center transition-all hover:shadow-2xl">
-                        <h3 class="text-2xl font-anton text-slate-900 mb-4 uppercase tracking-wide">Boost Your Odds</h3>
-                        <p class="text-slate-600 leading-relaxed">Share your custom link. The more you move, the higher you climb the waitlist.</p>
+                    <div class="w-24 h-24 rounded-full bg-white border-4 border-fuchsia-600 flex items-center justify-center text-4xl font-anton text-fuchsia-600 shadow-xl mb-8 relative z-10">02</div>
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl text-center w-full min-h-[220px] flex flex-col justify-center">
+                        <h3 class="text-2xl font-anton text-slate-900 mb-4 uppercase tracking-wide">Install Digital Pass</h3>
+                        <p class="text-slate-600 leading-relaxed">This is mandatory. Your digital pass handles real-time alerts and afterparty location drops.</p>
                     </div>
                 </div>
 
                 <!-- Step 03 -->
                 <div class="relative flex flex-col items-center">
-                    <!-- Distinct "Winner/Bypass" Circle -->
-                    <div class="w-24 h-24 rounded-full bg-orange-500 border-4 border-white flex items-center justify-center text-4xl font-anton text-white shadow-xl mb-8 relative z-10 transition-transform hover:scale-110">
-                        03
-                    </div>
-                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-3xl border-2 border-orange-400 shadow-2xl text-center w-full min-h-[220px] flex flex-col justify-center group relative overflow-hidden">
-                        <!-- Glow effect -->
-                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-orange-500/20 blur-3xl group-hover:bg-orange-500/40 transition-all"></div>
-                        
-                        <h3 class="text-2xl font-anton text-white mb-4 uppercase tracking-wide">Skip The Waitlist</h3>
-                        <p class="text-slate-300 leading-relaxed font-medium">Don't want to leave your night up to chance? <span class="text-orange-400 font-bold underline">Bypass the giveaway</span> and buy your ticket immediately. Your access is 100% locked in.</p>
+                    <div class="w-24 h-24 rounded-full bg-orange-500 border-4 border-white flex items-center justify-center text-4xl font-anton text-white shadow-xl mb-8 relative z-10">03</div>
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-3xl border-2 border-orange-400 shadow-2xl text-center w-full min-h-[220px] flex flex-col justify-center">
+                        <h3 class="text-2xl font-anton text-white mb-4 uppercase tracking-wide">Catch The Drop</h3>
+                        <p class="text-slate-300 leading-relaxed">We announce winners via Push Notification. When the pass vibrates, you’re in.</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +234,7 @@
                     </div>
                     <div class="flex items-start gap-4">
                         <div class="mt-1 bg-white p-1.5 rounded-full shadow-sm"><i data-lucide="x" class="w-6 h-6 text-rose-600 stroke-[4]"></i></div>
-                        <p class="text-lg text-slate-700 font-medium leading-snug"><strong class="text-slate-900 font-black text-xl">Don't be the one watching</strong><br> the entire night unfold on someone else's story.</p>
+                        <p class="text-lg text-violet-200 font-medium leading-snug"><strong class="text-slate-900 font-black text-xl">Don't be the one watching</strong><br> the entire night unfold on someone else's story.</p>
                     </div>
                 </div>
 
@@ -259,12 +287,47 @@
         </div>
     </section>
 
-    <footer class="text-center py-10 text-slate-400 text-sm font-bold uppercase tracking-widest bg-slate-50 border-t border-gray-200 mt-12">
+    <!-- BUY TICKET SECTION -->
+    <section class="bg-white py-16 md:py-24 border-t border-gray-200 scroll-mt-10" id="buy-section">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-5xl md:text-6xl text-slate-900 mb-6 font-anton uppercase">Capacity is Brutal.<br><span class="text-slate-400">No Guestlists.</span></h2>
+            
+            <div class="w-full bg-gray-200 h-6 rounded-full overflow-hidden mb-4 shadow-inner">
+                <div class="h-full bg-gradient-to-r from-orange-500 to-rose-500 progress-bar-stripes w-[94%]"></div>
+            </div>
+            <p class="text-rose-600 font-bold uppercase tracking-widest text-sm mb-10 flex items-center justify-center gap-2">
+                <i data-lucide="alert-triangle" class="w-4 h-4"></i> Capacity Warning: 94% Allocated
+            </p>
+
+            <p class="text-lg text-slate-600 mb-10 font-medium">Don't want to leave your night up to a coin flip? Bypass the queue and secure your VIP spot right now. Once we hit 100%, the door is dead.</p>
+            
+            <a href="#buy" class="block w-full text-center bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 hover:-translate-y-1 text-white text-xl md:text-2xl font-black py-7 px-6 rounded-2xl uppercase transition-all shadow-[0_10px_40px_rgba(244,63,94,0.4)] border-b-4 border-rose-700 active:translate-y-0 active:border-b-0">
+                I Can't Risk It. Secure My Ticket.
+            </a>
+        </div>
+    </section>
+
+    <footer class="text-center py-10 text-slate-400 text-sm font-bold uppercase tracking-widest bg-slate-50 border-t border-gray-200">
         © 2026 SOULSTICE R&B EXPERIENCES. ALL RIGHTS RESERVED.
     </footer>
 
     <script>
         lucide.createIcons();
+
+        // Lead form handling
+        const leadForm = document.getElementById('lead-form');
+        const signupStep = document.getElementById('signup-step');
+        const confirmationStep = document.getElementById('confirmation-step');
+        const formArrow = document.getElementById('form-arrow');
+
+        leadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            signupStep.classList.add('hidden-step');
+            confirmationStep.classList.remove('hidden-step');
+            formArrow.style.opacity = '0';
+        });
+
+        // Counter Logic
         let currentCount = 14284;
         const countElement = document.getElementById('pool-count');
         setInterval(() => {
@@ -272,6 +335,8 @@
             currentCount += addAmount;
             countElement.innerText = currentCount.toLocaleString();
         }, 3500);
+
+        // Countdown Timer
         let timeInSeconds = 5 * 60; 
         const countdownElement = document.getElementById('countdown');
         setInterval(() => {
